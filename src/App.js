@@ -63,7 +63,7 @@ const App = () => {
         </div>
         <h1 className="display-4">{selected.toUpperCase()}</h1>
         <div
-          className="badge badge-primary"
+          className="badge badge-primary p-3"
           style={{ cursor: "pointer" }}
           onClick={getLocation}
         >
