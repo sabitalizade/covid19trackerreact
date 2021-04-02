@@ -1,15 +1,15 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import "./app.css";
+import "./App.css";
 
 const App = () => {
   const [country, setcountry] = useState([]);
   const [data, setdata] = useState([]);
   const [info, setinfo] = useState([]);
-  const [location, setlocation] = useState("");
+//   const [location, setlocation] = useState("");
   const [selected, setselected] = useState("Global");
-  console.log(location);
-  console.log(data);
+//   console.log(location);
+//   console.log(data);
   useEffect(() => {
     axios.get("https://api.covid19api.com/countries").then((res) => {
       setcountry(res.data);
@@ -26,7 +26,7 @@ const App = () => {
       .then((response) => {
         let res = response.data;
         setselected(res.country_name);
-        setlocation(res.country_name.toLowerCase());
+        // setlocation(res.country_name.toLowerCase());
 
         const newdata = data.filter(
           (item) => item.Slug === res.country_name.toLowerCase()
